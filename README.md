@@ -9,9 +9,9 @@ Trabalho de desenvolvimento do Montanha
 
 # Como executar a aplicação?
 
-    Inicialmente se deve executar o npm install para instalar todas as dependências, em seguida:
+Inicialmente se deve executar o npm install para instalar todas as dependências, em seguida:
 
-        dev: npm run dev (executa a aplicação com o nodemon)
-        padrão: npm start
+    dev: npm run dev (executa a aplicação com o nodemon)
+    padrão: npm start
 
     
