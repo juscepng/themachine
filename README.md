@@ -14,4 +14,6 @@ Inicialmente se deve executar o npm install para instalar todas as dependências
     dev: npm run dev (executa a aplicação com o nodemon)
     padrão: npm start
 
-    
+# Switch de teste = Jest
+
+    test: npm test
