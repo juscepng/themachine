@@ -1,27 +1,3 @@
-// const calcConsumo = (wtts) => {
-//     let totalValorKwh = 0;
-//     wtts.local.forEach(local => {
-//         let totalLocalKwh = 0;
-//         local.equipamentos.forEach(equipamento => {
-//             const consumo = (equipamento.dias * equipamento.horas * equipamento.potencia) / 1000
-//             equipamento.kwh = consumo.toFixed(2) + "KWh"
-//             totalLocalKwh += consumo;
-
-//             equipamento.valor = "R$" + (consumo * wtts.concessionaria).toFixed(2)
-//         });
-
-//         local.totalKwh = totalLocalKwh.toFixed(2) + "KWh"
-//         totalValorKwh += totalLocalKwh
-//         local.valorTotal = "R$" + (totalLocalKwh * wtts.concessionaria).toFixed(2)
-//     });
-
-//     wtts.valorTotalKwg = totalValorKwh.toFixed(2) + "KWh"
-
-//     wtts.consumoTotal = "R$" + (totalValorKwh * wtts.concessionaria).toFixed(2)
-
-//     return wtts;
-// }
-
 const calcConsumo = (wtts) => {
     const { usuario, concessionaria, local } = wtts;
 
