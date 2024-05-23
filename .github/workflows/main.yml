@@ -1,26 +1,29 @@
-name: CI
+name: CI #Nome do workflow
 
-on:
-  pull_request:
-    branches:
+on: # Em que momento sera executado - Tag do github
+  pull_request: # Sempre que tiver um PR
+    branches: # Para essas branchs
     - main
+    - dev
+    
+  workflow_dispatch: # Tambem consigo executa-lo manualmente
 
-jobs:
-  test:
+jobs: # O que sera executado - Tag do github
+  test: # Sera executado o job test (eu escolho o nome) 
     name: Run Jest tests
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # Define em qual ambiente ira rodar o teste
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    steps: # Define o passo a passo do job - Tag do github
+      - name: Checkout repository # Define a versao da action que ele vai uasr no job
+        uses: actions/checkout@v3 
 
-      - name: Setup Node
+      - name: Setup Node # Faz o setup do node
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
 
-      - name: Install dependencies
+      - name: Install dependencies # Instala as dependencias
         run: npm install
 
-      - name: Run Jest
+      - name: Run Jest # Roda o Jest da branch
         run: npm test
