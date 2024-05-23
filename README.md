@@ -18,6 +18,13 @@ Sempre que criar uma branch nova, seguir o seguinte padrao:
     fix/nome-do-ajuste-realizado
     test/nome-do-teste-desenvolvido
 
+Sempre para criar uma branch, seguir o seguinte fluxo:
+
+    git checkout dev
+    git pull
+    git checkout -b feature/nome-da-tarefa (ou fix, ou test)
+    ~~ desenvolvimento da tarefa ~~
+
 # Como executar a aplicação?
 
 Inicialmente se deve executar o npm install para instalar todas as dependências, em seguida:
