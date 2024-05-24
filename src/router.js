@@ -20,10 +20,9 @@ router.get('/getWtts', wttsController.getJson);
 
 /**
  * @swagger
- * /postWtts:
+ * /calcWtts:
  *   post:
- *     summary: Calcular Wtts
- *     description: Calcula Wtts
+ *     summary: Calcula o consumo de watts
  *     requestBody:
  *       required: true
  *       content:
@@ -31,12 +30,44 @@ router.get('/getWtts', wttsController.getJson);
  *           schema:
  *             type: object
  *             properties:
- *               // Defina aqui os campos esperados no corpo da requisição para o cálculo do Wtts
+ *               usuario:
+ *                 type: string
+ *                 example: "string"
+ *               concessionaria:
+ *                 type: string
+ *                 example: "string"
+ *               local:
+ *                 type: array
+ *                 items:
+ *                   type: object
+ *                   properties:
+ *                     nome:
+ *                       type: string
+ *                       example: "string"
+ *                     equipamentos:
+ *                       type: array
+ *                       items:
+ *                         type: object
+ *                         properties:
+ *                           nome:
+ *                             type: string
+ *                             example: "string"
+ *                           potencia:
+ *                             type: string
+ *                             example: "string"
+ *                           horas:
+ *                             type: string
+ *                             example: "string"
+ *                           dias:
+ *                             type: string
+ *                             example: "string"
  *     responses:
  *       200:
- *         description: Sucesso ao calcular Wtts
- *       400:
- *         description: Requisição inválida
+ *         description: Consumo calculado com sucesso
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
  */
 router.post('/postWtts', wttsController.calcWtts);
 
