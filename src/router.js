@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 const wttsController = require('./controllers/wttsController');
+const wttsMiddlewares = require('./middlewares/wttsMiddlewares')
 
 /**
  * @swagger
