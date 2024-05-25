@@ -4,7 +4,7 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerDefinition = {
     openapi: '3.0.0',
     info:{
-        title: 'API de Cálculo de Consumo de Energia',
+        title: 'Wtts - API de Cálculo de Consumo de Energia',
         version: '1.0.0',
         description: `
           A API de Cálculo de Consumo de Energia permite calcular o consumo de energia elétrica com base em dados fornecidos pelo usuário. 
@@ -14,26 +14,6 @@ const swaggerDefinition = {
           **Endpoints Principais:**
           - **GET /getJson:** Retorna um exemplo de estrutura JSON que pode ser usada como referência para enviar dados ao endpoint de cálculo de consumo.
           - **POST /calcWtts:** Calcula o consumo de energia com base nos dados fornecidos pelo usuário.
-          
-          **Exemplo de Estrutura de Dados:**
-          \`\`\`json
-          {
-              "usuario": "string",
-              "concessionaria": "string",
-              "local": [
-                  {
-                      "nome": "quarto",
-                      "equipamentos": [
-                          {
-                              "nome": "string",
-                              "potencia": "string",
-                              "horas": "string",
-                              "dias": "string"
-                          }
-                      ]
-                  }
-              ]
-          }
           \`\`\`
           
           **Benefícios:**

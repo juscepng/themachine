@@ -7,20 +7,20 @@ const wttsMiddlewares = require('./middlewares/wttsMiddlewares');
 
 /**
  * @swagger
- * /getWtts:
+ * /api/v1/exemplo:
  *   get:
- *     summary: Obter informações Wtts
- *     description: Retorna informações JSON Wtts
+ *     summary: Obter exemplo de estrutura JSON
+ *     description: Retorna um exemplo de estrutura JSON que pode ser usada como referência para enviar dados ao endpoint de cálculo de consumo.
  *     responses:
  *       200:
- *         description: Sucesso ao obter as informações Wtts
+ *         description: Sucesso ao obter o exemplo de estrutura JSON
  */
-router.get('/getWtts', wttsController.getJson);
+router.get('/api/v1/exemplo', wttsController.getJson);
 
 
 /**
  * @swagger
- * /calcWtts:
+ * /api/v1/consumo/calcular:
  *   post:
  *     summary: Calcula o consumo de watts
  *     requestBody:
@@ -61,7 +61,7 @@ router.get('/getWtts', wttsController.getJson);
  *                           dias:
  *                             type: string
  *                             example: "string"
- *     responses:
+ *     Responses:
  *       200:
  *         description: Consumo calculado com sucesso
  *         content:
@@ -69,6 +69,6 @@ router.get('/getWtts', wttsController.getJson);
  *             schema:
  *               type: object
  */
-router.post('/postWtts', wttsController.calcWtts);
+router.post('/api/v1/consumo/calcular', wttsMiddlewares.validateJson, wttsController.calcWtts);
 
 module.exports = router;
