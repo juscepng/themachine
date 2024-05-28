@@ -12,8 +12,8 @@ const swaggerDefinition = {
           Esta API é ideal para concessionárias de energia, desenvolvedores de aplicativos de gerenciamento de energia e consumidores que desejam monitorar e gerenciar seu consumo de energia.
           
           **Endpoints Principais:**
-          - **GET /getJson:** Retorna um exemplo de estrutura JSON que pode ser usada como referência para enviar dados ao endpoint de cálculo de consumo.
-          - **POST /calcWtts:** Calcula o consumo de energia com base nos dados fornecidos pelo usuário.
+          - **GET /api/v1/exemplo:** Retorna um exemplo de estrutura JSON que pode ser usada como referência para enviar dados ao endpoint de cálculo de consumo.
+          - **POST /api/v1/consumo/calcular:** Calcula o consumo de energia com base nos dados fornecidos pelo usuário.
           \`\`\`
           
           **Benefícios:**
