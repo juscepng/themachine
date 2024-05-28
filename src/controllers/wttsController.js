@@ -7,7 +7,7 @@ const getJson = (req, resp) => {
             "concessionaria": 'string',
             "local": [
                 {
-                    "nome": "quarto",
+                    "nome": "string",
                     "equipamentos": [
                         {
                             "nome": 'string',

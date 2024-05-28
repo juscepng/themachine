@@ -1,4 +1,6 @@
 const calcConsumo = (wtts) => {
+    
+    console.log(wtts);
     const { usuario, concessionaria, local } = wtts;
 
     const localCalc = calcularConsumoLocal(local, concessionaria);
