@@ -61,7 +61,7 @@ router.get('/api/v1/exemplo', wttsController.getJson);
  *                           dias:
  *                             type: string
  *                             example: "string"
- *     Responses:
+ *     responses:
  *       200:
  *         description: Consumo calculado com sucesso
  *         content:
